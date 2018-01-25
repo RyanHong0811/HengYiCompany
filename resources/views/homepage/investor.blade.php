@@ -15,7 +15,8 @@
 
     <div class="col-9">
         <h2 class="page-title">客戶登入 <small>Investor Login</small></h2>
-            <form action="https://uc.waldorf-group.com/login" method="POST">
+            <form action="/login" method="POST">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="referrer" value="1">
 
                 <label for="username"><i class="fa fa-child"></i>&nbsp;帳號</label>

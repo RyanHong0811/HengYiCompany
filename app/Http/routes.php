@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,4 +27,32 @@ Route::get('/companies', function () {
 
 Route::get('/investor', function () {
     return view('homepage.investor', ['menu' => 'investor']);
+});
+
+Route::post('/login', function (Request $request) {
+    if (Auth::attempt(['username' => $request->input('username'), 'password' => $request->input('password')])) {	
+        return redirect('/');
+    }
+    return redirect('admin/login');
+    return view('homepage.investor', ['menu' => 'investor']);
+});
+
+Route::get('/user/contracts', function () {
+    return view('backend.customer.contracts', ['menu' => 'contracts']);
+});
+
+Route::get('/user/announcements', function () {
+    return view('backend.customer.announcements', ['menu' => 'announcements']);
+});
+
+Route::get('/user/wallet', function () {
+    return view('backend.customer.wallet', ['menu' => 'wallet']);
+});
+
+Route::get('/user/profile', function () {
+    return view('backend.customer.profile', ['menu' => 'profile']);
+});
+
+Route::get('/user/dashboard', function () {
+    return view('backend.customer.dashboard', ['menu' => 'dashboard']);
 });
