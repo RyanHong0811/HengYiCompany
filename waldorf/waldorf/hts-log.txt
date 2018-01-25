@@ -1,0 +1,11 @@
+HTTrack3.49-2 launched on Thu, 25 Jan 2018 11:02:50 at https://www.waldorf-group.com/index.php
+(winhttrack https://www.waldorf-group.com/index.php -O "waldorf/waldorf" -P none:8080 -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 42 seconds : 41 links scanned, 40 files written (2587651 bytes overall) [2423532 bytes received at 57703 bytes/sec], 1726956 bytes transferred using HTTP compression in 31 files, ratio 89%, 10.2 requests per connection
+(No errors, 0 warnings, 0 messages)

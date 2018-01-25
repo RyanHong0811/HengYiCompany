@@ -1,0 +1,8 @@
+https://www.waldorf-group.com/index.php -O "waldorf/waldorf" -P none:8080 -%v
+File generated automatically on Thu, 25 Jan 2018 11:02:50, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
