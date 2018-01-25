@@ -136,7 +136,7 @@ table td.data_txt {
         </div>
     </div>
     <div class="col-3">
-        <div class="card">
+<!--         <div class="card">
             <div class="card-box">
                 <h2>我要修改...</h2>
 
@@ -170,7 +170,7 @@ table td.data_txt {
                     </tr>
                 </tbody></table>
             </div>
-        </div>
+        </div> -->
 
         <br>
 

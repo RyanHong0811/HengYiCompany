@@ -12,7 +12,7 @@
                                 <h3 class="card-title"><i class="fa fa-dollar fa-fw"></i>&nbsp;帳戶可動用額</h3>
                             </div>
                             <div class="card-box">
-                                <h4>USD 0.00&nbsp;&nbsp;<a @click="showBankModal" class="size-sm btn btn-common btn_open_withdraw_modal pull-right" ><i class="fa fa-fw fa-bank"></i>&nbsp;提取收益</a></h4>
+                                <h4>USD 0.00&nbsp;&nbsp;</h4>
 
                                                             </div>
                         </div>
