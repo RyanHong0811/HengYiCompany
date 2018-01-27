@@ -21,7 +21,7 @@
             <div class="language_account_feature">
                 <ul>
                     <li class="account_feature"><p><i class="fa fa-fw fa-user"></i>&nbsp;張振 (CHANG,CHEN)</p></li>
-                    <li class="account_feature"><a href="https://uc.waldorf-group.com/logout" class="lang"><i class="fa fa-sign-out"></i>&nbsp;登出</a></li>
+                    <li class="account_feature"><a href="/logout" class="lang"><i class="fa fa-sign-out"></i>&nbsp;登出</a></li>
                 </ul>
             </div>
 

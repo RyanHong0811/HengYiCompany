@@ -56,3 +56,7 @@ Route::get('/user/profile', function () {
 Route::get('/user/dashboard', function () {
     return view('backend.customer.dashboard', ['menu' => 'dashboard']);
 });
+
+Route::get('/user/', function () {
+    return view('backend.customer.dashboard', ['menu' => 'dashboard']);
+});

@@ -1,8 +1,8 @@
 @extends('layout.homepage')
 @section('content-view')
 
-                <div class="content_navigation category-about_us"></div>
-        
+<!--                 <div class="content_navigation category-about_us"></div>
+ -->        
         <div class="content content-">
         
 <div class="columns-12" id="content">
