@@ -33,6 +33,10 @@ Route::get('/login', function (Request $request) {
     return view('layout.login');
 });
 
+Route::get('/test', function (Request $request) {
+    return bcrypt('xzc111');
+});
+
 Route::post('/login', function (Request $request) {
     if (Auth::attempt(['username' => $request->input('username'), 'password' => $request->input('password')])) {
         $user = App\User::where('username', $request->input('username'))->first();

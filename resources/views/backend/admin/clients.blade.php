@@ -3,7 +3,13 @@
         <div class="main_content">
             <div class="container news_container">
     <h1>客戶列表</h1>
-
+    @if (count($users) == 0)
+        <div class="card">
+            <div class="card-content" style="padding: 1rem; font-size: 1.4rem;">
+                <p style="font-size: 20px">目前還沒有任何客戶。</p>
+            </div>
+        </div>
+    @else
     <table class="table table-striped table-hover">
         <thead>
             <th width="20%">客戶姓名</th>
@@ -29,6 +35,7 @@
 
         </tbody>
     </table>
+    @endif    
 </div>
         </div>
 

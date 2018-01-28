@@ -61,7 +61,7 @@
         @if (count($end_contract) == 0)
                     <div class="card">
                         <div class="card-content" style="padding: 1rem; font-size: 1.4rem;">
-                            <p>您目前還沒有任何生效中的合約，有新合約時就會轉進這個列表。</p>
+                            <p>您目前還沒有任何已結束的合約，有新合約時就會轉進這個列表。</p>
                         </div>
                     </div>
         @else

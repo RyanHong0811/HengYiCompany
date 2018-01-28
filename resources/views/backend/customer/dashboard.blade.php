@@ -6,6 +6,13 @@
     <div class="columns-7">
         <div class="col-5 news_container">
             <h2>最新公告</h2>
+            @if (count($announcement) == 0)
+                <div class="card">
+                    <div class="card-content" style="padding: 1rem; font-size: 1.4rem;">
+                        <p style="font-size: 20px">目前還沒有任何公告。</p>
+                    </div>
+                </div>
+            @else
                 @foreach($announcement as $value)
                 <div class="panel">
                     <div class="panel-box">
@@ -15,7 +22,7 @@
                     </div>
                 </div>
                 @endforeach
-            
+            @endif
             <div align="right" style="padding-top: 20px;">
                 <a href="/user/announcements" class="btn-outline">更多公告 <i class="fa fa-arrow-right"></i></a>
             </div>
