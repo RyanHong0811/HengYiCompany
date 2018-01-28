@@ -20,7 +20,7 @@
         <header>
             <div class="language_account_feature">
                 <ul>
-                    <li class="account_feature"><p><i class="fa fa-fw fa-user"></i>&nbsp;張振 (CHANG,CHEN)</p></li>
+                    <li class="account_feature"><p><i class="fa fa-fw fa-user"></i>&nbsp;{{$user->name}} ({{$user->name_en}})</p></li>
                     <li class="account_feature"><a href="/logout" class="lang"><i class="fa fa-sign-out"></i>&nbsp;登出</a></li>
                 </ul>
             </div>
@@ -32,8 +32,8 @@
                     <li class="{{($menu == 'dashboard') ? 'active' : ''}}" ><a href="/user/dashboard">帳戶概覽</a></li>
                     <li class="{{($menu == 'announcements') ? 'active' : ''}}" ><a href="/user/announcements">最新公告</a></li>
                     <li class="{{($menu == 'contracts') ? 'active' : ''}}" ><a href="/user/contracts">合約列表<!--  <span class="badge">&nbsp;0&nbsp;</span> --></a></li>
-                    <li class="{{($menu == 'wallet') ? 'active' : ''}}" ><a href="/user/wallet">帳戶錢包</a></li>
-                    <li class="{{($menu == 'profile') ? 'active' : ''}}"><a href="/user/profile">個人檔案</a></li>
+<!--                     <li class="{{($menu == 'wallet') ? 'active' : ''}}" ><a href="/user/wallet">帳戶錢包</a></li>
+ -->                    <li class="{{($menu == 'profile') ? 'active' : ''}}"><a href="/user/profile">個人檔案</a></li>
 <!--                     <li class="{{($menu == 'issues') ? 'active' : ''}} last"><a href="/user/issues">服務進度查詢</a></li> -->
                 </nav>
 

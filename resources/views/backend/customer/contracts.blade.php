@@ -15,15 +15,57 @@
         </ul>
 
         <div id="active-tab" class="tab-content active">
-                            <div class="card">
-                    <div class="card-content" style="padding: 1rem; font-size: 1.4rem;">
-                        <p>您目前還沒有任何生效中的合約，有新合約時就會轉進這個列表。</p>
+        @if (count($start_contract) == 0)
+                    <div class="card">
+                        <div class="card-content" style="padding: 1rem; font-size: 1.4rem;">
+                            <p>您目前還沒有任何生效中的合約，有新合約時就會轉進這個列表。</p>
+                        </div>
                     </div>
-                </div>
+        @else
+                    <table class="table table-striped table-hover  ">
+                        <thead>
+                            <tr>
+                                <th>合約編號</th>
+                                <th>合約日期</th>
+                                <th>截止日期</th>
+                                <th>合約金額</th>
+                                <th>預期收益</th>
+        <!--                         <th>已配發收益</th>
+         -->                        <th>動作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                                @foreach($start_contract as $value)
+                                <tr class="active">
+                                    <td>{{$value['id']}}<br><span class="label color-success">生效中</span></td>
+                                    <td>{{$value['start_day']}}</td>
+                                    <td>{{$value['end_day']}}</td>
+                                    <td>{{number_format($value['amount'], 2)}}</td>
+                                    <td>{{number_format($value['amount'] * $value['rate'] /100, 2)}}</td>
+        <!--                             <td>70.00</td>
+         -->                            <td>
+                                        <a href="/user/contract/{{$value['id']}}" class="btn">
+                                            <i class="fa fa-search fa-fw"></i>&nbsp;
+                                            查看記錄
+                                        </a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                        </tbody>
+                    </table>
+        @endif
                     </div>
 
         <div id="inactive-tab" class="tab-content">
-                        <table class="table table-striped table-hover  ">
+        @if (count($end_contract) == 0)
+                    <div class="card">
+                        <div class="card-content" style="padding: 1rem; font-size: 1.4rem;">
+                            <p>您目前還沒有任何生效中的合約，有新合約時就會轉進這個列表。</p>
+                        </div>
+                    </div>
+        @else
+            <table class="table table-striped table-hover  ">
                 <thead>
                     <tr>
                         <th>合約編號</th>
@@ -31,38 +73,31 @@
                         <th>截止日期</th>
                         <th>合約金額</th>
                         <th>預期收益</th>
-                        <th>已配發收益</th>
-                        <th>動作</th>
+<!--                         <th>已配發收益</th>
+ -->                        <th>動作</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                                            <tr class="inactive">
-                            <td>9081242<br><span class="label">已結束</span></td>
-                            <td>2017-10-15</td>
-                            <td>2018-10-15</td>
-                            <td>USD 10,000.00</td>
-                            <td>USD 840.00</td>
-                            <td>USD 70.00</td>
-                            <td>
-                                <a href="https://uc.waldorf-group.com/user/contract/9081242" class="btn">
+                        @foreach($end_contract as $value)
+                        <tr class="inactive">
+                            <td>{{$value['id']}}<br><span class="label">已結束</span></td>
+                            <td>{{$value['start_day']}}</td>
+                            <td>{{$value['end_day']}}</td>
+                            <td>{{number_format($value['amount'], 2)}}</td>
+                            <td>{{number_format($value['amount'] * $value['rate'] /100, 2)}}</td>
+<!--                             <td>70.00</td>
+ -->                            <td>
+                                <a href="/user/contract/{{$value['id']}}" class="btn">
                                     <i class="fa fa-search fa-fw"></i>&nbsp;
                                     查看記錄
                                 </a>
                             </td>
                         </tr>
-                                    </tbody>
-
-                <tfoot>
-                    <tr>
-                        <td colspan="3">小計</td>
-                        <td>USD 10,000.00</td>
-                        <td>USD 840.00</td>
-                        <td>USD 70.00</td>
-                        <td></td>
-                    </tr>
-                </tfoot>
+                        @endforeach
+                </tbody>
             </table>
+        @endif
                     </div>
     </div>
 </div>

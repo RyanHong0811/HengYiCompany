@@ -42,8 +42,8 @@ table td.data_txt {
             <div class="panel-box">
                 <h2>
                     <i class="fa fa-fw fa-child"></i>
-                    張振
-                    <small>CHANG,CHEN</small>
+                    {{$user['name']}}
+                    <small>{{$user['name_en']}}</small>
                 </h2>
 
                 <table>
@@ -55,7 +55,7 @@ table td.data_txt {
                         </td>
 
                         <td colspan="3" class="data_txt">
-                            +886956676496
+                            {{$user['phone']}}
                         </td>
                     </tr>
 
@@ -66,7 +66,7 @@ table td.data_txt {
                         </td>
 
                         <td colspan="3" class="data_txt">
-                            dj13333@yahoo.com.tw
+                            {{$user['email']}}
                         </td>
                     </tr>
 
@@ -78,7 +78,7 @@ table td.data_txt {
                         </td>
 
                         <td colspan="3" class="data_txt">
-                            
+                            {{$user['address']}}
                         </td>
                     </tr>
                 </tbody></table>
@@ -93,8 +93,8 @@ table td.data_txt {
             <div class="panel-box">
                                 <h2>
                     <i class="fa fa-fw fa-bank"></i>
-                    台北富邦銀行
-                    <small>TPBKTWTP</small>
+                    {{$user['bank_name']}}
+                    <small>{{$user['bank_name_en']}}</small>
                 </h2>
 
                 <table>
@@ -105,7 +105,7 @@ table td.data_txt {
                         </td>
 
                         <td colspan="3" class="data_txt">
-                            八德分行
+                            {{$user['bank_address']}}
                         </td>
                     </tr>
 
@@ -116,7 +116,7 @@ table td.data_txt {
                         </td>
 
                         <td colspan="3" class="data_txt">
-                            340168890740 
+                            {{$user['bank_account']}} 
                         </td>
                     </tr>
 
@@ -128,7 +128,7 @@ table td.data_txt {
                         </td>
 
                         <td colspan="3" class="data_txt">
-                            張振CHANG,CHEN
+                            {{$user['bank_user_name']}}
                         </td>
                     </tr>
                 </tbody></table>
@@ -180,7 +180,7 @@ table td.data_txt {
 
                 <p>若您有任何詢問或是有關行政事務上的任何問題，都歡迎您和您的客戶經理直接連絡，或使用下面提供的方式連絡客服人員。</p>
 
-                                <a href="mailto:bond@waldorfbullion.com" class="btn-outline"><i class="fa fa-fw fa-envelope-o"></i>&nbsp;電郵</a>
+                                <a href="mailto:hong.ying.zu@gmail.com" class="btn-outline"><i class="fa fa-fw fa-envelope-o"></i>&nbsp;電郵</a>
             </div>
         </div>
     </div>

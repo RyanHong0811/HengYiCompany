@@ -21,7 +21,7 @@
 
         <div class="header-container">
             <header>
-                <a href="/"><h1><span>恆裔金融集團 WALDORF GROUP</span></h1></a>
+                <a href="/"><h1><span>恆裔金融集團 HENGYI GROUP</span></h1></a>
 
                 <nav>
                     <li class="{{($menu == 'about') ? 'active' : ''}}">

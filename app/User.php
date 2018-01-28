@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use App\Contract;
+use Carbon\Carbon;
 
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
@@ -36,4 +38,15 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+
+    public function active_contract()
+    {
+        return Contract::where('user_id', $this->id)->where('end_day', '>=', Carbon::today()->toDateString())->count();
+    }
+
+    public function end_contract()
+    {
+        return Contract::where('user_id', $this->id)->where('end_day', '<=', Carbon::today()->toDateString())->count();
+    }
 }
